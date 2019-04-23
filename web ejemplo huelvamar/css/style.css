@@ -1,0 +1,85 @@
+
+
+.hero {
+    padding: 100px 0 50px 0;
+    text-align: center;
+    background: black url('../img/Sea.JPG') no-repeat center / cover;
+    color: white;
+}
+
+.button {
+    width: 150px;                   /* 3 - ancho absoluto fuerza área */
+    display: block;                 /* 2 - bloques ocupan totalidad ancho disponiblee */
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-weight: 100;   
+    margin: 10px auto;              /* 4 - margin auto en ejes laterales centra elementos en bloque */
+    padding: 10px 5px;              /* 1 - eje vertical bloqueado en elementos inline */
+    font-family: sans-serif;
+
+    /*
+    transition-property: background;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+    */
+
+    transition: background 0.8s linear 0.2s;
+}
+
+.button:hover {
+    background: white;
+    color: grey;
+}
+
+.arrow {
+    margin-top: 50px;
+    position: relative;
+    font-size: 3em;
+    /*
+    animation-name: flotar;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    */
+
+    animation: flotar 1s ease-in alternate infinite;
+
+}
+
+@keyframes flotar {
+
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 30px;
+    }
+}
+
+
+
+@media all and (max-width: 768px) {
+
+    .valores .col-md {
+        margin-bottom: 80px;
+    }
+}
+
+
+
+@media all and (max-width: 600px) {
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .button {
+        width: 60%;
+    }
+}
